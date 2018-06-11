@@ -15,6 +15,7 @@
     <groupId>com.fxg.pom</groupId>
     <artifactId>service-parent</artifactId>
     <version>1.0</version>
+    <relativePath>../user-service/service-parent-1.0.pom</relativePath>
   </parent>
 
   <properties>
