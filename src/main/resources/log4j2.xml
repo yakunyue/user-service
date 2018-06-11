@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Configuration后面的status，这个用于设置log4j2自身内部的信息输出，可以不设置，当设置成trace时， 你会看到log4j2内部各种详细输出。可以设置成OFF(关闭)或Error(只输出错误信息) -->
+<Configuration status="OFF">
+	<Properties>
+		<!-- 日志文件目录 -->
+		<Property name="dir">logs</Property>
+		<!-- 日志文件名,改成你自己的服务名称 -->
+		<Property name="fileName">logs</Property>
+	</Properties>
+	<Appenders>
+
+		<!--去掉了颜色配置，在logio里正常显示，否则有乱码-->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%-5.5t] %-5level %30.30c{1.} - %msg%n%throwable"/>
+		</Console>
+	</Appenders>
+
+	<!-- 全局配置，默认所有的Logger都继承此配置 -->
+	<Loggers>
+		<Logger name="com.fxg" level="trace" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Root level="info" additivity="false">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>
