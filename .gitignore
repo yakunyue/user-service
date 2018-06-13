@@ -1,6 +1,10 @@
 # Compiled class file
 *.class
 
+## maven相关的不需要入库的文件
+mvnw
+mvnw.cmd
+
 # Log file
 *.log
 
