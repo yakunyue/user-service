@@ -37,7 +37,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
-          <mainClass>com.johnnian.App</mainClass>
+          <mainClass>com.fxg.userservice</mainClass>
           <layout>ZIP</layout>
           <includes>
             <include>
